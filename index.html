@@ -11,73 +11,85 @@ body{
 	padding: 120px;
 	font-family: 'arial', 'Raleway', sans-serif;
 }
-#right{
-	margin-right: 0px;
-	margin-left: 85vw;
-}
-#right .links{
-	padding-left: 15px;
-	margin-top: 0;
-}
-#left .links{
-	padding-left: 15px;
-	margin-top: -10px;
-	
-}
 .links{
-	color: #000;
+	color: rgba(0,0,0,0.87);
 	opacity: 0.75;
 	text-decoration: none;
 	font-size: 13px;
+	margin-top: 25px;
 }
+
 .links>.fas{
 	width: 30px;
 	height: 30px;
 }
+
 .links:hover{
 	text-decoration: underline;
+	opacity: 100%;
 }
+
 .links:active{
 	color: #000;
 	opacity: 0.75;
 	text-decoration: none;
 }
+
 .links:visited{
 	color: #000;
 	opacity: 0.75;
 	text-decoration: none;
 }
+#about-link{
+	padding-left: 30px;	
+}
+
+#name-icon {
+	border-radius: 50%;
+	width: 30px;
+	margin-top: 18px;
+	
+}
+
+
 #nav-bar{
   position: fixed;
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+	grid-template-columns: 80px 40px auto 40px 50px 25px 70px;
+	grid-template-rows: 20px;
   width: 100%;
+	min-width: 381px;
   height: 4.5em;
   margin: 0;
   top: 0;
   right: 0;
   bottom: 0;
 }
+
 .main-body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-items: center;
 }
+
 .google-logo{
 	display: block;
 	width: 240px;
 	height: 85px;
-	margin: 0 auto 40px auto;
+	margin: 21px auto 40px auto;
 	
 }
+
 .image-container{
 	margin-top: 89px;
 }
+
 .form-search-bar{
 	background-color: transparent;
 	margin: auto;
 }
+
 #search-bar-container{
 	display: flex;
 	padding: 10px 1em;
@@ -87,20 +99,29 @@ body{
 	background-color: transparent;
 	border: 1px solid #dfe1e5;
 }
+
 #search-bar{
 	background-color: transparent;
 	margin: auto;
 	color: black;
 	font-size: 16px;
-	width: auto;
+	width: 100%;
 	border: none;
 	autocapitalize:none;
 }
+#search-bar:focus{
+	outline: none;
+	margin-left: 10px;
+}
+
 #search-bar-container:hover{
 	background-color: #fff;
   box-shadow: 0 1px 6px rgba(32,33,36,.28);
   border-color: rgb(223,225,229);
 }
+
+
+
 .google-button{
 	background-color: #f8f9fa;
 	border: 1px solid #f8f9fa;
@@ -116,13 +137,16 @@ body{
 	font-size: 1em;
 	margin-top: 2em;
 }
+
 .google-button:hover{
 	box-shadow: 0 1px 6px rgba(32,33,36,.28);
 	cursor: pointer;
 }
+
 .google-button:active{
 	border: #0754E1;
 }
+
 .fas{
 	color: #9aa0a6;
 	align-self: center;
@@ -131,15 +155,13 @@ body{
 	</head>
 	<body>
 		<div id="nav-bar">
-			<div id="left">
-			<a class="links" href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
-			<a class="links" href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
-				</div>
-			<div id="right">
-			<a class="links" href="https://mail.google.com/mail/u/0/?ogbl">Gmail</a>
-			<a class="links" href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a>
-			<a class="links" href=""><i id="grid" class="fas fa-th"></i></a>
-			</div>
+			<a id="about-link" class="links" href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+			<a id="store-link" class="links" href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
+			<div></div>
+			<a id="gmail-link" class="links" href="https://mail.google.com/mail/u/0/?ogbl">Gmail</a>
+			<a id="images-link" class="links" href="https://www.google.com/gmail/">Images</a>
+			<a id="apps-link" class="links" href="https://www.google.com/intl/en/about/products?tab=wh"><i id="grid-icon" class="fas fa-th"></i></a>
+				<a id="name-link" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/webhp%3Fhl%3Den%26ictx%3D2%26sa%3DX%26ved%3D0ahUKEwjisrLa5_HtAhXymq0KHaJBBKIQPQgI&ec=GAZAAQ"><img id="name-icon" src="https://andrewjh271.github.io/google-homepage/image_a.png"></a>
 		</div>
 		<div class="main-body">
 			<div id="image-container" tabindex=0>
@@ -153,8 +175,8 @@ body{
 						<i class="fas fa-search"></i>
 						<input type="text" id="search-bar">
 					</div>
-					<button class="google-button">Google Search</button>
-					<button class="google-button">I'm Feeling Lucky</button>
+					<a href=""><button class="google-button">Google Search</button></a>
+					<a href=""><button class="google-button">I'm Feeling Lucky</button></a>
 				</form>
 			</center>
 			</div>
